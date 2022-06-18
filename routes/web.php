@@ -20,6 +20,7 @@ Route::get('productos/nuevo', 'ProductoController@create')->name('productos.crea
 Route::post('productos/guardar', 'ProductoController@store')->name('productos.store');
 Route::get('productos/{id}/editar', 'ProductoController@edit')->name('productos.edit');
 Route::put('productos/{id}', 'ProductoController@update')->name('productos.update');
+Route::delete('productos/{id}', 'ProductoController@destroy')->name('productos.destroy');
 
 Route::get('ventas', 'VentaController@index')->name('ventas.index');
 Route::get('ventas/generar', 'VentaController@create')->name('ventas.create');

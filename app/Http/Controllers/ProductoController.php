@@ -85,8 +85,20 @@ class ProductoController extends Controller
        
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
+        try {
+            Producto::FindOrFail($id);
 
+            Producto::find($id)->delete();
+        
+            return redirect()->back();
+
+        } catch (\Exception $e) {
+            return response()->json(['mensaje'=>'Este producto no existe'], 404);
+        }
+        
+
+        return redirect()->back()->with('success', 'El producto ha sido eliminado correctamente.');
     }
 }
