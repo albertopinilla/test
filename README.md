@@ -2,8 +2,12 @@ Requisitos
 
 Git
 Composer
-PHP 7.4
+PHP 7.4 o superior
 MySQL
+
+Especificaciones
+
+Laravel 7.30.6
 
 Instalación
 
